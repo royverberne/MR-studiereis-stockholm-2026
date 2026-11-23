@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Persoonlijk ontwikkelverslag van Roy Verberne over de Erasmus+-studiereis van Stichting Prisma naar Stockholm, november 2026.">
+<link rel="icon" href="img/logo.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Prisma Studiereis Stockholm 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
+<style>
+/* Layout: navy Prisma-kop met regenbooglijn, plakkende tabbalk, per tab een eigen paneel met kaarten, foto's openen in een lightbox */
+:root{
+  --bg:#F3F6FB; --surface:#FFFFFF; --ink:#13203A; --muted:#58637A; --line:#DCE3EE;
+  --band:#143057; --band-ink:#FFFFFF; --band-muted:#B9C7DD;
+  --navy:#143057; --accent:#C2007A; --accent-ink:#FFFFFF;
+  --opinion-bg:#FCE9F3; --opinion-line:#E7A3C8;
+  --looked-bg:#ECEFF3; --looked-ink:#4F586A;
+  --ok:#1F8A4C; --ok-bg:#E3F4EA; --part:#A86400; --part-bg:#FDF0DC; --no:#8A3A3A; --no-bg:#F6E5E5; --extra:#1C6FA8; --extra-bg:#E2EFF9;
+  --sg-green:#2E9E5B; --sg-orange:#F0941F; --sg-red:#D64545;
+  --rainbow:linear-gradient(90deg,#2BA8E0 0%,#5B4BA8 25%,#C2007A 50%,#F39200 72%,#F7D117 86%,#8CC63F 100%);
+  --shadow:0 1px 2px rgba(20,48,87,.06),0 6px 18px rgba(20,48,87,.06);
+  --f-display:"Quicksand","Nunito Sans",system-ui,sans-serif;
+  --f-body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C1527; --surface:#14213A; --ink:#E7ECF5; --muted:#9DA9BF; --line:#25344F;
+  --band:#0A1A33; --band-ink:#FFFFFF; --band-muted:#9FB0CB;
+  --navy:#8FB6E8; --accent:#FF5CB0; --accent-ink:#1A0612;
+  --opinion-bg:#33142A; --opinion-line:#7A2D5C;
+  --looked-bg:#1C2940; --looked-ink:#AEB8CB;
+  --ok:#6FD39A; --ok-bg:#163525; --part:#F3B65A; --part-bg:#3A2A10; --no:#F0A0A0; --no-bg:#3A1C1C; --extra:#7CC0F2; --extra-bg:#14304A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1527; --surface:#14213A; --ink:#E7ECF5; --muted:#9DA9BF; --line:#25344F;
+  --band:#0A1A33; --band-ink:#FFFFFF; --band-muted:#9FB0CB;
+  --navy:#8FB6E8; --accent:#FF5CB0; --accent-ink:#1A0612;
+  --opinion-bg:#33142A; --opinion-line:#7A2D5C;
+  --looked-bg:#1C2940; --looked-ink:#AEB8CB;
+  --ok:#6FD39A; --ok-bg:#163525; --part:#F3B65A; --part-bg:#3A2A10; --no:#F0A0A0; --no-bg:#3A1C1C; --extra:#7CC0F2; --extra-bg:#14304A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25);
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--band)}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.2;text-wrap:balance;margin:0;color:var(--ink)}
+p{margin:0}
+ul{margin:0;padding-left:1.15rem}
+li+li{margin-top:.45rem}
+strong{font-weight:700}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Kop */
+.hero{background:var(--band);color:var(--band-ink);margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--rainbow)}
+.hero .wrap{padding-block:2.2rem 2.4rem;display:grid;grid-template-columns:auto 1fr;gap:1.6rem;align-items:center}
+.hero img.logo{width:104px;height:auto;background:#fff;border-radius:18px;padding:10px}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--band-muted)}
+.hero h1{color:var(--band-ink);font-size:clamp(2rem,5vw,3.2rem);margin:.25rem 0 .55rem}
+.hero .meta{color:var(--band-muted);font-size:.98rem;max-width:62ch}
+.hero .meta strong{color:var(--band-ink)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.fact{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:.28rem .8rem;font-size:.86rem;color:var(--band-ink);font-variant-numeric:tabular-nums}
+.fact b{font-family:var(--f-display);font-size:1rem;margin-right:.2rem}
+
+/* Download */
+.dl-row{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-top:1.3rem}
+.dl-btn{font:inherit;font-weight:700;font-size:1rem;display:inline-flex;align-items:center;gap:.55rem;background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:.7rem 1.3rem;cursor:pointer;box-shadow:0 4px 14px rgba(194,0,122,.35);transition:transform .15s ease,filter .15s ease}
+.dl-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.dl-btn:disabled{opacity:.7;cursor:progress;transform:none}
+.dl-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.dl-meta{font-weight:600;font-size:.8rem;opacity:.85;border-left:1px solid currentColor;padding-left:.55rem}
+.dl-status{font-size:.88rem;color:var(--band-muted)}
+.foot-dl{font:inherit;font-weight:700;color:var(--accent);background:none;border:0;padding:0;cursor:pointer}
+.foot-dl:hover{text-decoration:underline}
+
+/* Tabs */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none;padding-block:.6rem}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:inherit;font-weight:700;font-size:.93rem;color:var(--muted);background:transparent;border:1px solid transparent;border-radius:999px;padding:.5rem 1rem;cursor:pointer;display:flex;align-items:center;gap:.45rem;white-space:nowrap}
+.tab:hover{color:var(--ink);background:var(--surface);border-color:var(--line)}
+.tab[aria-selected="true"]{color:var(--accent-ink);background:var(--accent);border-color:var(--accent)}
+.tab .k{font-family:var(--f-display);font-size:.78rem;opacity:.85}
+.tab:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* Legenda */
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;font-size:.85rem;color:var(--muted);padding-block:1.2rem .2rem}
+.legend span{display:inline-flex;align-items:center;gap:.45rem}
+.sw{display:inline-block;flex:0 0 14px;width:14px;height:14px;border-radius:4px;border:1px solid var(--line);background:var(--surface)}
+.sw.looked{background:var(--looked-bg)}
+.sw.opinion{background:var(--opinion-bg);border-color:var(--opinion-line)}
+
+/* Panelen */
+main{padding-block:1rem 3rem}
+.panel{display:grid;gap:2.2rem;animation:fade .25s ease}
+@keyframes fade{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}
+.panel-head{display:grid;gap:.6rem;max-width:72ch}
+.panel-head h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.panel-head p{color:var(--muted);font-size:1.05rem}
+.pillar{display:inline-flex;align-items:center;gap:.4rem;width:max-content;max-width:100%;font-size:.8rem;font-weight:700;letter-spacing:.04em;color:var(--navy);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.22rem .75rem}
+.pillar::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rainbow)}
+section>h3{font-size:1.3rem;margin-bottom:.9rem}
+.sub{font-size:.95rem;color:var(--muted);margin:-.5rem 0 1rem}
+
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.15rem 1.25rem;display:grid;gap:.55rem;align-content:start;min-width:0}
+.card h4{font-size:1.08rem}
+.card p,.card li{font-size:.98rem}
+.card.feature{border:2px solid var(--accent);box-shadow:var(--shadow)}
+.tag{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+.opinion{background:var(--opinion-bg);border:1px solid var(--opinion-line);border-radius:var(--r);padding:1.1rem 1.25rem;display:grid;gap:.45rem}
+.opinion .lbl{font-family:var(--f-display);font-weight:700;color:var(--accent);font-size:.95rem}
+.looked{background:var(--looked-bg);color:var(--looked-ink);border-radius:var(--r);padding:1rem 1.2rem;font-size:.95rem}
+.looked .lbl{font-weight:700;font-style:italic}
+.note{border-left:4px solid var(--part);background:var(--part-bg);border-radius:0 var(--r) var(--r) 0;padding:.85rem 1.1rem;font-size:.95rem}
+
+/* Kort samengevat */
+.summary{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.sum{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem 1.2rem;display:grid;gap:.5rem;grid-template-rows:auto 1fr auto}
+.sum h4{font-size:1.08rem}
+.sum p{color:var(--muted);font-size:.95rem}
+.go{justify-self:start;font:inherit;font-weight:700;font-size:.88rem;color:var(--accent);background:none;border:0;padding:.2rem 0;cursor:pointer}
+.go:hover{text-decoration:underline}
+
+/* Opbrengst-tabel */
+.results{display:grid;gap:.6rem}
+.res{display:grid;grid-template-columns:minmax(0,1.1fr) auto minmax(0,1.6fr);gap:1rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.9rem 1.1rem}
+.res .what{font-weight:700}
+.res .what small{display:block;font-weight:600;color:var(--muted);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
+.res .why{color:var(--muted);font-size:.95rem}
+.chip{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;font-weight:700;border-radius:999px;padding:.2rem .7rem;white-space:nowrap}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.chip.ok{color:var(--ok);background:var(--ok-bg)}
+.chip.part{color:var(--part);background:var(--part-bg)}
+.chip.no{color:var(--no);background:var(--no-bg)}
+.chip.extra{color:var(--extra);background:var(--extra-bg)}
+
+/* Grades */
+.grades-wrap{overflow-x:auto}
+.grades{display:grid;grid-template-columns:auto repeat(9,minmax(44px,1fr));min-width:520px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface);font-variant-numeric:tabular-nums}
+.grades div{padding:.5rem .4rem;text-align:center;border-left:1px solid var(--line);font-size:.92rem}
+.grades .h{text-align:left;padding-left:.9rem;font-weight:700;border-left:0;color:var(--muted);font-size:.82rem}
+.grades .top{border-bottom:1px solid var(--line);font-family:var(--f-display);font-weight:700}
+.grades .hl{background:var(--opinion-bg);color:var(--accent);font-weight:700}
+
+/* Scholen */
+details.school{background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+details.school summary{list-style:none;cursor:pointer;padding:1rem 1.2rem;display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;align-items:center}
+details.school summary::-webkit-details-marker{display:none}
+details.school summary h4{font-size:1.1rem}
+details.school summary .kind{grid-column:1;color:var(--muted);font-size:.9rem}
+details.school summary .plus{grid-row:1/3;grid-column:2;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--accent);transition:transform .2s}
+details.school[open] summary .plus{transform:rotate(45deg)}
+details.school .body{padding:0 1.2rem 1.2rem;display:grid;gap:.75rem;font-size:.97rem}
+
+/* Foto's */
+.ph{margin:0;display:grid;gap:.45rem;min-width:0}
+.ph button{all:unset;cursor:zoom-in;display:block;border-radius:12px;overflow:hidden;position:relative;background:var(--line)}
+.ph button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/9;transition:transform .35s ease}
+.ph.tall img{aspect-ratio:9/14}
+.ph button:hover img{transform:scale(1.03)}
+.ph button::after{content:"Vergroot";position:absolute;right:.6rem;bottom:.6rem;background:rgba(10,26,51,.78);color:#fff;font-size:.75rem;font-weight:700;padding:.22rem .6rem;border-radius:999px}
+.ph figcaption{font-size:.88rem;color:var(--muted)}
+.ph figcaption b{color:var(--ink)}
+.photos{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.with-photo{display:grid;gap:1.25rem;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:start}
+.with-photo.narrow{grid-template-columns:minmax(0,1.8fr) minmax(0,.8fr)}
+.gallery{display:grid;gap:.6rem;grid-template-columns:repeat(6,minmax(0,1fr))}
+.gallery .ph img{aspect-ratio:1/1}
+.gallery .ph button::after{display:none}
+
+/* Rekenles-stappen */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:.6rem;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2.1rem 1fr;gap:.8rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.85rem 1rem;margin:0}
+.steps li::before{content:counter(s);width:2.1rem;height:2.1rem;border-radius:50%;background:var(--navy);color:var(--surface);display:grid;place-items:center;font-family:var(--f-display);font-weight:700}
+
+/* Sociogram */
+.socio{display:grid;gap:.5rem}
+.socio-row{display:flex;align-items:center;gap:.6rem;font-size:.95rem}
+.dot{width:16px;height:16px;border-radius:50%;flex:0 0 auto}
+.dot.g{background:var(--sg-green)} .dot.o{background:var(--sg-orange)} .dot.r{background:var(--sg-red)}
+.signal{margin-top:.4rem;font-size:.92rem;border-top:1px dashed var(--line);padding-top:.6rem;color:var(--muted)}
+
+/* Twijfels */
+.doubts{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.doubt{background:var(--surface);border:1px solid var(--opinion-line);border-radius:var(--r);padding:1rem 1.1rem;display:grid;gap:.35rem;align-content:start}
+.doubt h4{font-size:1rem;color:var(--accent)}
+.doubt p{font-size:.93rem}
+
+/* Kleine dingen */
+.minis{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.mini{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.95rem 1.05rem;display:grid;gap:.3rem;align-content:start}
+.mini h4{font-size:1rem}
+.mini p{font-size:.9rem;color:var(--muted)}
+.hearts{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.2rem}
+.hearts span{font-size:.8rem;font-weight:700;background:var(--opinion-bg);color:var(--accent);border-radius:999px;padding:.15rem .6rem}
+
+/* Quick wins */
+.qws{display:grid;gap:1.2rem}
+.qw{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:auto minmax(0,1fr)}
+.qw .num{background:var(--navy);color:var(--surface);font-family:var(--f-display);font-weight:700;font-size:2rem;display:grid;place-items:center;padding:0 1.2rem;min-width:4.2rem}
+.qw:nth-child(1) .num{background:#2BA8E0;color:#0B2340}
+.qw:nth-child(2) .num{background:#5B4BA8;color:#fff}
+.qw:nth-child(3) .num{background:#C2007A;color:#fff}
+.qw:nth-child(4) .num{background:#F39200;color:#2A1600}
+.qw .content{padding:1.1rem 1.25rem;display:grid;gap:.9rem}
+.qw h4{font-size:1.15rem}
+.qw .src{font-size:.85rem;color:var(--muted)}
+.qw .cols{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.qw .cols>div{display:grid;gap:.2rem;align-content:start}
+.qw .k{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.qw .cols p{font-size:.95rem}
+
+/* Prisma-gevoel */
+.contacts{display:grid;gap:.7rem}
+.contact{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.85rem 1rem}
+.contact .ic{width:2rem;height:2rem;border-radius:50%;background:var(--rainbow);flex:0 0 auto}
+.thanks{background:var(--band);color:var(--band-ink);border-radius:var(--r);padding:1.4rem 1.5rem;display:grid;gap:.5rem;position:relative;overflow:hidden}
+.thanks::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--rainbow)}
+.thanks h3{color:var(--band-ink);font-size:1.5rem}
+.thanks p{color:var(--band-muted)}
+
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+footer .wrap{padding-block:1.4rem 2rem;display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;justify-content:space-between}
+.mail{user-select:all;color:var(--ink);font-weight:600}
+
+/* Lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1300px);max-height:94vh;width:100%;color:#fff}
+dialog.lb::backdrop{background:rgba(6,14,28,.88)}
+.lb-inner{display:grid;gap:.7rem;justify-items:center}
+.lb-inner img{max-width:100%;max-height:78vh;width:auto;height:auto;border-radius:10px;display:block}
+.lb-cap{max-width:70ch;text-align:center;font-size:.98rem;color:#DDE5F2;padding:0 3rem}
+.lb-cap b{color:#fff;display:block;font-family:var(--f-display);font-size:1.1rem}
+.lb-count{font-size:.8rem;color:#9FB0CB;font-variant-numeric:tabular-nums}
+.lb-btn{position:fixed;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.5rem;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{background:rgba(255,255,255,.26)}
+.lb-prev{left:max(12px,env(safe-area-inset-left,0px))}
+.lb-next{right:max(12px,env(safe-area-inset-right,0px))}
+.lb-close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));transform:none;font-size:1.2rem}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;gap:1rem}
+  .hero img.logo{width:76px;border-radius:14px;padding:7px}
+  .with-photo,.with-photo.narrow{grid-template-columns:1fr}
+  .res{grid-template-columns:1fr;gap:.4rem}
+  .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .qw{grid-template-columns:1fr}
+  .qw .num{justify-content:start;padding:.5rem 1.25rem;font-size:1.4rem;min-width:0;place-items:center start}
+  .lb-cap{padding:0 .5rem}
+  .lb-prev,.lb-next{top:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="img/logo.png" alt="Logo studiereis: Prisma-beeldmerk op de Zweedse vlag" width="104" height="101">
+    <div>
+      <div class="eyebrow">Erasmus+ · Persoonlijk ontwikkelverslag</div>
+      <h1>Prisma Studiereis Stockholm 2026</h1>
+      <p class="meta"><strong>Roy Verberne</strong> · leerkracht groep 8, rekencoördinator en ICT-coördinator · BS De Groenling, Stichting Prisma · 18–21 november 2026</p>
+      <div class="facts">
+        <span class="fact"><b>2</b> scholen bezocht</span>
+        <span class="fact"><b>1</b> interview</span>
+        <span class="fact"><b>2</b> leerdoelen</span>
+        <span class="fact"><b>4</b> quick wins</span>
+      </div>
+      <div class="dl-row">
+        <button class="dl-btn" type="button" data-download>
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download verslag
+          <span class="dl-meta">PDF · 9 pagina's</span>
+        </button>
+        <span class="dl-status" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Onderdelen van het verslag">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" id="t-overzicht" aria-controls="overzicht" data-tab="overzicht">Overzicht</button>
+    <button class="tab" role="tab" id="t-doel-1" aria-controls="doel-1" data-tab="doel-1"><span class="k">Doel 1</span>AI &amp; digitaal</button>
+    <button class="tab" role="tab" id="t-doel-2" aria-controls="doel-2" data-tab="doel-2"><span class="k">Doel 2</span>Eigenaarschap</button>
+    <button class="tab" role="tab" id="t-bijvangst" aria-controls="bijvangst" data-tab="bijvangst">Bijvangst</button>
+    <button class="tab" role="tab" id="t-quick-wins" aria-controls="quick-wins" data-tab="quick-wins"><span class="k">4</span>Quick wins</button>
+    <button class="tab" role="tab" id="t-prisma" aria-controls="prisma" data-tab="prisma">Prisma-gevoel</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="legend" aria-label="Leeswijzer">
+    <span><i class="sw"></i>Zelf gezien of gehoord</span>
+    <span><i class="sw looked"></i>Later opgezocht, niet zelf gezien</span>
+    <span><i class="sw opinion"></i>Mijn mening</span>
+  </div>
+
+  <!-- ============ OVERZICHT ============ -->
+  <div class="panel" id="overzicht" role="tabpanel" aria-labelledby="t-overzicht">
+    <div class="panel-head">
+      <h2>Wat ik meenam uit Stockholm</h2>
+      <p>Van 18 tot en met 21 november bezocht ik met collega's van Stichting Prisma scholen in Stockholm. Ik vertrok met twee leerdoelen. Als ICT-coördinator keek ik daarnaast naar hoe andere klassen met devices en AI werken.</p>
+    </div>
+
+    <section>
+      <h3>Kort samengevat</h3>
+      <div class="summary">
+        <article class="sum"><h4>AI is er nog nauwelijks</h4><p>Verboden voor leerlingen tot grade 9 en er is geen beleid. De Engelse schrijfles met AI-tips was de sterkste toepassing en een voorbeeld van goed pionieren.</p><button class="go" data-goto="doel-1">Naar doel 1 →</button></article>
+        <article class="sum"><h4>Digitaal wordt minder, niet meer</h4><p>De scholen gaan terug naar boeken en werkboeken. Digitaal zag ik vooral als verrijking: iPad-rekenactiviteiten en verhalen schrijven in een Minecraft-wereld.</p><button class="go" data-goto="doel-1">Naar doel 1 →</button></article>
+        <article class="sum"><h4>DigiExam was een grote plus</h4><p>Leerlingen werken in een gesloten omgeving en alleen aan taken die de leerkracht openzet. Dat voorkomt ongepast gebruik van onder andere AI. Ik beveel Prisma aan dit te onderzoeken.</p><button class="go" data-goto="doel-1">Naar doel 1 →</button></article>
+        <article class="sum"><h4>Eigenaarschap niet in weektaken</h4><p>De lessen zijn leerkrachtgestuurd. Wel zag ik sterke werkvormen voor begrip en samenwerking.</p><button class="go" data-goto="doel-2">Naar doel 2 →</button></article>
+        <article class="sum"><h4>Waardevolste bijvangst</h4><p>Het sociogram, het jaarlijks leerlinggesprek met de directeur, en een verrijkte kijk op inclusie (en hoe dit vorm te geven).</p><button class="go" data-goto="bijvangst">Naar bijvangst →</button></article>
+        <article class="sum"><h4>Het Prisma-gevoel is versterkt</h4><p>Met mogelijkheden tot nieuwe samenwerkingen na de reis.</p><button class="go" data-goto="prisma">Naar Prisma-gevoel →</button></article>
+      </div>
+    </section>
+
+    <section>
+      <h3>Wat leverde het op, ten opzichte van mijn leerdoelen?</h3>
+      <div class="results">
+        <div class="res"><div class="what"><small>Doel 1</small>Drie direct toepasbare voorbeelden voor reken- en zaakvaklessen</div><span class="chip part">Gedeeltelijk</span><div class="why">Twee voorbeelden voor mijn groep: schrijffeedback met AI en verhalen in Minecraft. Beide zijn taal; een voorbeeld voor rekenen of zaakvakken heb ik niet.</div></div>
+        <div class="res"><div class="what"><small>Doel 1</small>Beleidsvoorstel voor veilig en didactisch verantwoord werken met AI</div><span class="chip no">Niet gehaald</span><div class="why">Stockholm heeft geen beleid en staat op hetzelfde punt als wij. Wel zie ik dat leerkrachten zonder kaders met eigen accounts werken.</div></div>
+        <div class="res"><div class="what"><small>Doel 2</small>Vernieuwde weektaak of projectplanning groep 8</div><span class="chip no">Niet gehaald</span><div class="why">Ik zag geen weektaken. Het was leerkrachtgestuurd.</div></div>
+        <div class="res"><div class="what"><small>Daarnaast</small>Minimaal twee toepasbare quick wins</div><span class="chip ok">Gehaald</span><div class="why">Vier quick wins. <button class="go" data-goto="quick-wins">Bekijk de quick wins →</button></div></div>
+        <div class="res"><div class="what"><small>Onverwacht</small>Bijvangst</div><span class="chip extra">Extra</span><div class="why">Sociogram, jaarlijks leerlinggesprek, een eigen kijk op inclusie, hoogbegaafdheid en discipline.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Wie we spraken</h3>
+      <div class="grid">
+        <details class="school">
+          <summary><h4>Katarina Norra skola</h4><span class="kind">Gemeentelijke school, Södermalm · F t/m grade 9</span><span class="plus" aria-hidden="true">+</span></summary>
+          <div class="body">
+            <p>Ongeveer 670 leerlingen en 90 stafleden. Per grade 70 tot 75 leerlingen in klassen van 20 tot 25, die regelmatig wisselen, ook in het jaar, zodat leerkrachten de hele grade leren kennen. Plaatsing gebeurt via een stedelijk algoritme op woonlocatie, ongeacht de behoefte van het kind.</p>
+            <p>Visie: een educatieve en veilige school waar leerlingen zich goed voelen, <em>'challenged but not stressed'</em>. Tot en met grade 9 geldt hetzelfde curriculum, omdat de verschillen bij elkaar blijven en elkaar versterken. Nationale toetsen zijn er in grade 6 en 9.</p>
+          </div>
+        </details>
+        <details class="school">
+          <summary><h4>Campus Manilla</h4><span class="kind">Onafhankelijke school (friskola) · grade 1 t/m 9</span><span class="plus" aria-hidden="true">+</span></summary>
+          <div class="body">
+            <p>Ongeveer 500 leerlingen. Ik bezocht een grade 3-klas met een leerkracht en een onderwijsassistent. In de klas hingen de drie harten zichtbaar en de rekenles verliep volgens het EDI-model. Ouders kunnen twee keer per jaar binnenlopen in de klas.</p>
+            <div class="looked"><span class="lbl">Opgezocht, niet zelf gezien:</span> de school staat bekend om sterke resultaten. In grade 9 behaalt 100% de toelating tot het voortgezet onderwijs (landelijk ongeveer 85%), en 85% van de leerkrachten is bevoegd (landelijk 72%). Bron: skolkoll.se.</div>
+          </div>
+        </details>
+        <details class="school">
+          <summary><h4>Marjolein Pronk</h4><span class="kind">De Nederlandse School Stockholm · interview</span><span class="plus" aria-hidden="true">+</span></summary>
+          <div class="body">
+            <p>Operationeel schoolleider en leerkracht bij De Nederlandse School Stockholm, die één keer per week Nederlands taal- en cultuuronderwijs geeft op locaties van de Stockholm International School. Ze heeft vooral ervaring met onderwijs in Singapore en nu Zweden, en kent het Nederlandse onderwijs een beetje. We spraken haar in het hotel; ze was een waardevolle spiegel.</p>
+            <p>Over AI en digitaal bevestigde ze wat ik zag: geen AI-beleid, verboden voor leerlingen, en een tendens terug naar boeken en werkboeken.</p>
+            <ul>
+              <li><strong>Ondersteuning en werkdruk:</strong> de extra handen in de klas komen voort uit investeringen van gemeente en overheid. Leerkrachten hebben daardoor veel tijd en ruimte voor lesgeven en voorbereiden.</li>
+              <li><strong>Inclusie en hoogbegaafdheid:</strong> veel gedrags- en leerproblemen blijven in de klas, met extra begeleiding. Zij vraagt zich af of dat altijd passend is. Hoogbegaafdheid wordt erkend, maar er wordt geen rekening mee gehouden.</li>
+              <li><strong>Lesdag en niveau:</strong> weinig vakken per dag (vier à vijf), laat beginnen met beoordelen en dus later rapporten. De onderbouw is ontwikkelingsgericht en onderzoekend, met veel buiten zijn. Ze schat het niveau tot grade 9 in als havo.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <h3>Zweedse grades en leeftijden</h3>
+      <p class="sub">Zweden kent tot en met grade 9 één doorlopende school (6 tot 16 jaar). Grade 5 en 6 komen qua leeftijd overeen met mijn groep 8.</p>
+      <div class="grades-wrap">
+        <div class="grades" role="table" aria-label="Zweedse grades en leeftijden">
+          <div class="h top" role="rowheader">Grade</div>
+          <div class="top">1</div><div class="top">2</div><div class="top">3</div><div class="top">4</div><div class="top hl">5</div><div class="top hl">6</div><div class="top">7</div><div class="top">8</div><div class="top">9</div>
+          <div class="h" role="rowheader">Leeftijd (ca.)</div>
+          <div>7</div><div>8</div><div>9</div><div>10</div><div class="hl">11</div><div class="hl">12</div><div>13</div><div>14</div><div>15</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Foto's uit Stockholm</h3>
+      <p class="sub">Klik op een foto om hem groot te bekijken.</p>
+      <div class="gallery">
+        <figure class="ph"><button data-photo="minecraft" aria-label="Vergroot foto: Minecraft-verhaal"><img src="img/minecraft.jpg" alt="" loading="lazy"></button></figure>
+        <figure class="ph"><button data-photo="werkboek" aria-label="Vergroot foto: werkboek en klaartaak"><img src="img/werkboek-ipad.jpg" alt="" loading="lazy"></button></figure>
+        <figure class="ph"><button data-photo="digiexam" aria-label="Vergroot foto: DigiExam"><img src="img/digiexam.jpg" alt="" loading="lazy"></button></figure>
+        <figure class="ph"><button data-photo="handschrift" aria-label="Vergroot foto: handschrift"><img src="img/handschrift.jpg" alt="" loading="lazy"></button></figure>
+        <figure class="ph"><button data-photo="begeleiding" aria-label="Vergroot foto: begeleiding in de klas"><img src="img/begeleiding.jpg" alt="" loading="lazy"></button></figure>
+        <figure class="ph"><button data-photo="vasa" aria-label="Vergroot foto: Vasa-museum"><img src="img/vasa.jpg" alt="" loading="lazy"></button></figure>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ DOEL 1 ============ -->
+  <div class="panel" id="doel-1" role="tabpanel" aria-labelledby="t-doel-1" hidden>
+    <div class="panel-head">
+      <span class="pillar">Prisma-pijler: Digitaal differentiëren</span>
+      <h2>Doel 1: digitale geletterdheid en AI</h2>
+      <p>Onderzoeken hoe digitale geletterdheid en AI worden verweven in het onderwijs. Beoogde opbrengst: drie direct toepasbare voorbeelden voor reken- en zaakvaklessen en een beleidsvoorstel voor veilig en didactisch verantwoord werken met AI.</p>
+    </div>
+
+    <section>
+      <h3>Wat ik zag en hoorde</h3>
+      <div class="grid two">
+        <article class="card">
+          <span class="tag">AI</span>
+          <h4>Verboden voor leerlingen tot grade 9</h4>
+          <p>Er is geen AI-beleid en leerlingen worden er nog niet op voorbereid (Marjolein Pronk). Leerkrachten gebruiken AI wel voor voorbereiding, maar met eigen accounts: schoolaccounts zijn er nog niet.</p>
+          <p>Eén leerkracht op Katarina Norra pioniert met een goedgekeurde chatbot. In de Engelse les schrijven leerlingen een tekst, krijgen AI-tips en herschrijven die zelf. In een tweede voorbeeld schrijven leerlingen prompts, voert de leerkracht ze in en geeft de resultaten terug: AI met de leerkracht als tussenpersoon.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Devices</span>
+          <h4>Terug van digitaal naar boeken</h4>
+          <p>Leerlingen werken nauwelijks op devices en de leerkracht bepaalt wanneer ze die gebruiken. Er is een webfilter, met filters op games en geweld.</p>
+          <p>Leerlingen hebben een eigen device, vaak een iPad of Chromebook, en structureel één lesuur ICT per week, onder meer programmeren (Makerspace).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="with-photo narrow">
+      <article class="card feature">
+        <span class="tag">Aanbeveling voor Prisma</span>
+        <h4>DigiExam: een gesloten omgeving</h4>
+        <p>Op beide scholen werd hiermee gewerkt en dat vond ik heel positief. Leerlingen kunnen alleen werken aan de taken die de leerkracht openzet, voor toetsen en schrijfopdrachten. Zo kunnen ze niet het internet op en wordt ongepast gebruik van onder andere AI voorkomen.</p>
+        <p>Ik raad Prisma aan te onderzoeken of we dit ook kunnen inzetten bij toetsen en schrijfopdrachten.</p>
+      </article>
+      <figure class="ph tall"><button data-photo="digiexam" aria-label="Vergroot foto: DigiExam"><img src="img/digiexam.jpg" alt="Klaslokaal met projectie van DigiExam en een laptop van de leerkracht" loading="lazy"></button><figcaption><b>DigiExam.</b> Whiteboards met beamers, gekoppeld aan laptops.</figcaption></figure>
+    </section>
+
+    <section>
+      <h3>Digitale geletterdheid in de praktijk</h3>
+      <p class="sub">Cursorisch aangeboden en vanaf de oudere leeftijdsgroepen geïntegreerd in de vakken. In de jongere groepen wordt digitaal zo min mogelijk gebruikt. Twee voorbeelden op Katarina Norra:</p>
+      <div class="photos">
+        <figure class="ph"><button data-photo="minecraft" aria-label="Vergroot foto: Minecraft-verhaal"><img src="img/minecraft.jpg" alt="Een leerling typt een verhaal op een iPad in een Minecraft-wereld; op het bord staan de woorden Häxa, Kikare en Gråta" loading="lazy"></button><figcaption><b>Verhalen in Minecraft.</b> Grade 4 of 5 typt een verhaal op drie sleutelwoorden: een heks, een verrekijker en de emotie verdriet. Daarna lopen ze door de wereld om elkaars verhalen te lezen.</figcaption></figure>
+        <figure class="ph"><button data-photo="werkboek" aria-label="Vergroot foto: werkboek en klaartaak"><img src="img/werkboek-ipad.jpg" alt="Twee leerlingen aan het werk met werkboek en iPad" loading="lazy"></button><figcaption><b>Werkboek eerst.</b> Na het rekenwerkboek werken leerlingen op de iPad verder met schaak- en rekenactiviteiten als klaartaak.</figcaption></figure>
+      </div>
+    </section>
+
+    <aside class="opinion">
+      <span class="lbl">Mijn mening</span>
+      <p>Stockholm staat op hetzelfde punt als wij. Voor een beleidsvoorstel voor Prisma heb ik daarom geen input meegenomen. Het enige verschil is de collega die mocht pionieren. De sterkste toepassing vond ik de schrijffeedback, en die kan ik vertalen naar onze Nederlandse schrijfopdrachten.</p>
+      <p>Ik ben van mening dat leerlingen (zeker vanaf 11/12 jaar) AI moeten leren gebruiken als studiecoach, waar het een verrijking is.</p>
+    </aside>
+
+    <section>
+      <h3>Opbrengst doel 1</h3>
+      <div class="results">
+        <div class="res"><div class="what">Drie toepasbare voorbeelden</div><span class="chip part">Gedeeltelijk</span><div class="why">Twee voorbeelden, beide taal: schrijffeedback met AI en verhalen in Minecraft (quick wins 1 en 3).</div></div>
+        <div class="res"><div class="what">Beleidsvoorstel AI</div><span class="chip no">Niet gehaald</span><div class="why">Stockholm heeft geen beleid. Leerkrachten werken zonder kaders met eigen accounts.</div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ DOEL 2 ============ -->
+  <div class="panel" id="doel-2" role="tabpanel" aria-labelledby="t-doel-2" hidden>
+    <div class="panel-head">
+      <span class="pillar">Prisma-pijler: Inclusiever lesgeven</span>
+      <h2>Doel 2: eigenaarschap en executieve functies</h2>
+      <p>Onderzoeken hoe leerkrachten eigenaarschap en executieve functies ontwikkelen bij 11- en 12-jarigen. Beoogde opbrengst: een vernieuwde weektaak of projectplanning voor groep 8.</p>
+    </div>
+
+    <div class="note"><strong>Let op:</strong> mijn observaties gaan vooral over grade 3 en grade 9. Grade 5 en 6, de leeftijd van mijn groep 8, zag ik hooguit vluchtig. Wat ik concludeer, geldt dus met die kanttekening.</div>
+
+    <section>
+      <h3>Wat ik zag en hoorde</h3>
+      <div class="grid">
+        <article class="card"><span class="tag">Lokaal</span><h4>Ingericht op frontaal onderwijs</h4><p>In grade 3 staan enkele extra werkplekken. De gangen dienen als rustige werkplek, maar ik had niet het idee dat er een visie achter zit.</p></article>
+        <article class="card"><span class="tag">Planning</span><h4>Lesgestuurd, geen weektaak</h4><p>In de bovenbouw (vanaf grade 6 of 7) werkt iedereen aan dezelfde les en opdracht. Naarmate de opdracht vordert, loopt de moeilijkheid op en zit er differentiatie in. Grade 9 werkt van les tot les, met per vak werk.</p></article>
+        <article class="card"><span class="tag">Klassenklimaat</span><h4>Zeer strak</h4><p>Geen enkele leerling sprak buiten zijn of haar beurt. Er was geen enkele correctie nodig. De leerkracht kan daardoor bijna 100% didactisch werken.</p></article>
+        <article class="card"><span class="tag">Verantwoordelijkheid</span><h4>Leren studeren</h4><p>Grade 4 tot 6 leert studeren in de klas, grade 7 tot 9 buiten school als huiswerk. Verwerkingsopdrachten maken ze in de klas; wat niet af is, is huiswerk.</p></article>
+        <article class="card"><span class="tag">Lezen</span><h4>Samen één boek</h4><p>In de Engelse les leest de hele klas hetzelfde boek. Na elk hoofdstuk verzint de leerkracht opdrachten voor woordenschat, samenvatten en dieper nadenken over de tekst. Ook bij Zweeds. Veel aandacht voor klassikaal lezen.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h3>De rekenles in grade 3</h3>
+      <p class="sub">Campus Manilla, volgens het EDI-model (expliciete directe instructie).</p>
+      <ol class="steps">
+        <li><div><strong>Vijf minuten redactiesommen</strong> om de dag te beginnen.</div></li>
+        <li><div><strong>Startopdracht op het wisbordje:</strong> breuken van klein naar groot ordenen. Leerlingen houden het bordje boven hun hoofd, zodat de leerkracht het begrip controleert. Heeft een leerling het fout, dan mag hij het zeggen, mag de klas reageren en krijgt hij de kans zijn antwoord te verbeteren.</div></li>
+        <li><div><strong>Uitleg op het bord</strong> vanuit het werkboek.</div></li>
+        <li><div><strong>Vijftien minuten zelfstandig werken.</strong> De onderwijsassistent geeft extra rekeninstructie waar dat nodig is.</div></li>
+        <li><div><strong>Klassikaal nakijken.</strong> Doorgaans controleert de leerkracht alle schriften in de pauze; de onderwijsassistenten gaan mee naar buiten.</div></li>
+      </ol>
+      <div class="grid" style="margin-top:1rem">
+        <article class="card"><span class="tag">Onderwijsassistent</span><p>Geeft een-op-een leesbegeleiding in leesboeken, uitdagend tot hoever een leerling kan.</p></article>
+        <article class="card"><span class="tag">Taal</span><p>Leerlingen ruilen hun werkboekje met een schoudermaatje en checken onder andere de spelling.</p></article>
+      </div>
+    </section>
+
+    <div class="looked"><span class="lbl">Opgezocht, niet zelf gezien:</span> leerlingen in hogere groepen stellen persoonlijke doelen in een ontwikkelplan met een mentor, er zijn vaste blokken zelfstandig werken, projectweken en inspraak via de leerlingenraad. Ik zag dit in de praktijk niet.</div>
+
+    <aside class="opinion">
+      <span class="lbl">Mijn mening</span>
+      <p>Ook hier geven ze evidence-based les: het directe instructiemodel. De discipline vond ik positief op het gebied van didactische efficiëntie. Ik miste wel veel klassikale interactie en positief werkoverleg. Weektaken zag ik niet, dus voor een nieuwe weektaak in groep 8 neem ik niets mee.</p>
+    </aside>
+
+    <section>
+      <h3>Opbrengst doel 2</h3>
+      <div class="results">
+        <div class="res"><div class="what">Vernieuwde weektaak of projectplanning groep 8</div><span class="chip no">Niet gehaald</span><div class="why">Ik zag geen weektaken. Het was leerkrachtgestuurd.</div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ BIJVANGST ============ -->
+  <div class="panel" id="bijvangst" role="tabpanel" aria-labelledby="t-bijvangst" hidden>
+    <div class="panel-head">
+      <span class="pillar">Prisma-pijler: Inclusiever lesgeven</span>
+      <h2>Bijvangst: wat ik niet had verwacht</h2>
+      <p>De waardevolste inzichten kwamen van buiten mijn leerdoelen.</p>
+    </div>
+
+    <section class="with-photo">
+      <article class="card">
+        <span class="tag">Sociogram</span>
+        <h4>Mijn band met elke leerling</h4>
+        <p>Leerkrachten van dezelfde grade vullen per leerling in hoe goed hun band is. Daarna bedenken ze zelf verbeteracties om hun relatie met bepaalde leerlingen te versterken.</p>
+        <div class="socio" aria-label="Kleuren van het sociogram">
+          <div class="socio-row"><i class="dot g"></i><span><strong>Groen</strong>: goede band</span></div>
+          <div class="socio-row"><i class="dot o"></i><span><strong>Oranje</strong>: neutraal</span></div>
+          <div class="socio-row"><i class="dot r"></i><span><strong>Rood</strong>: minder goede band</span></div>
+          <p class="signal">Staat een leerling bij meerdere leerkrachten op rood, dan is dat een signaal om iets te doen.</p>
+        </div>
+      </article>
+      <aside class="opinion">
+        <span class="lbl">Mijn mening</span>
+        <p>Dit vind ik heel sterk. In mijn eigen klas maakt het mijn band met leerlingen inzichtelijk en laat het zien waar ik de band kan versterken. Het helpt ook om na te gaan of een leerling een band heeft met andere onderwijsassistenten, hoewel leerlingen in mijn klas vooral met mij te maken hebben.</p>
+        <p>Ik deel dit in het team, waarbij het vooral een tip is voor duopartners.</p>
+      </aside>
+    </section>
+
+    <section class="with-photo">
+      <article class="card">
+        <span class="tag">Kwaliteit</span>
+        <h4>Jaarlijks leerlinggesprek met de directeur</h4>
+        <p>Eén keer per jaar spreekt de directeur zes leerlingen per grade. Dat levert goede informatie op over de kwaliteit van het onderwijs en wat tekortschiet.</p>
+      </article>
+      <aside class="opinion">
+        <span class="lbl">Mijn mening</span>
+        <p>Wij meten welbevinden met de SCOL, maar dat is een vragenlijst en je krijgt geen beeld van de motivatie achter de antwoorden. In een gesprek kun je doorvragen. Bij ons zou de kwaliteitscoördinator één of twee keer per jaar zes leerlingen per groep, van groep 1 tot en met 8, kunnen spreken. Dat geeft een redelijke doorsnee van het sociaal welbevinden en van hoe er wordt lesgegeven.</p>
+      </aside>
+    </section>
+
+    <section>
+      <h3>Inclusie: wat ik zag en waar mijn twijfels zitten</h3>
+      <div class="with-photo">
+        <div class="card">
+          <span class="tag">Wat ik zag en hoorde</span>
+          <ul>
+            <li>Leerlingen met een extra ondersteuningsbehoefte blijven in de gewone klas, met veel begeleiding. Een leerling met diabetes of autisme heeft bijvoorbeeld de hele dag iemand naast zich. Per klas is er een leerkracht en een onderwijsassistent; in de grade 3-klas had één leerling ook een persoonlijke begeleider.</li>
+            <li>Gedrags- en leerproblemen blijven in de klas. Daarnaast is er een mini-studio voor bijles of les op een ander niveau. De school traint leerkrachten in het omgaan met zwakkere theoretische leerlingen en het herkennen van leerproblemen bij meisjes.</li>
+            <li>Het curriculum is hetzelfde voor iedere leerling tot en met grade 9. De school ziet dat als kracht: de verschillen versterken elkaar. Er zijn hoge verwachtingen van alle leerlingen.</li>
+            <li>Hoogbegaafdheid wordt erkend, maar in de klas wordt er geen rekening mee gehouden: <em>'dat komt later wel'</em>. Iedereen presteert binnen de kaders van de grade, sterk of zwak.</li>
+          </ul>
+        </div>
+        <figure class="ph"><button data-photo="begeleiding" aria-label="Vergroot foto: begeleiding in de klas"><img src="img/begeleiding.jpg" alt="Een begeleider zit naast een leerling tijdens de instructie" loading="lazy"></button><figcaption><b>Begeleiding in de klas.</b> Een-op-een begeleiding de hele dag, bij instructie en verwerking.</figcaption></figure>
+      </div>
+      <p class="sub" style="margin:1.2rem 0 .8rem;color:var(--accent);font-weight:700">Mijn twijfels, om vier redenen</p>
+      <div class="doubts">
+        <div class="doubt"><h4>Middelen</h4><p>In Zweden staan gemiddeld meer volwassenen voor de klas, met meer geld. Bij ons loopt de inzet van onderwijsassistenten juist terug. Zonder die middelen is het niet te kopiëren.</p></div>
+        <div class="doubt"><h4>Erbij horen</h4><p>Een indruk uit één klas, geen conclusie. Een leerling met een persoonlijke begeleider kreeg de instructie mee, maar was op veel momenten en in de pauzes buiten de groep. Is zo'n leerling dan echt onderdeel van de groep? Mijn gevoel zegt dat aansluiting bij gelijkgestemden in ons SBO passender is.</p></div>
+        <div class="doubt"><h4>Passendheid</h4><p>Marjolein Pronk vraagt zich zelf ook af of dit altijd passend is.</p></div>
+        <div class="doubt"><h4>Andere denkwijzen</h4><p>Het is voor mij geen inclusie als er geen aandacht is voor andere manieren van denken en leren, zoals bij hoogbegaafdheid. Inclusie is leerlingen zien en aanpassingen maken binnen de kaders van de klas, met eventueel een Topklas of SBO voor gelijkgestemden.</p></div>
+      </div>
+      <aside class="opinion" style="margin-top:1rem">
+        <span class="lbl">Mijn conclusie</span>
+        <p>Inclusie speelt ook op onze school, en dit gaf me een scherper beeld van mijn eigen standpunt. Ik zie de inclusie in Zweden niet als voorbeeld: financieel is dit niet haalbaar en ik betwijfel op basis van wat ik zag of dit het beste is voor ieder kind.</p>
+      </aside>
+    </section>
+
+    <section class="with-photo">
+      <article class="card">
+        <span class="tag">Discipline</span>
+        <h4>Stil in de klas, vrij buiten</h4>
+        <p>Buiten zijn kinderen relaxed en vrij. In de klas is het heel stil. De dag start op de gang: leerlingen maken een rij, steken hun duim op en gaan één voor één naar binnen, waar de leerkracht ze begroet. Ze staan achter hun stoel en gaan pas zitten als de leerkracht goedemorgen zegt. Daarna een korte dagopening met datum en programma.</p>
+      </article>
+      <aside class="opinion">
+        <span class="lbl">Mijn mening</span>
+        <p>De discipline is erg goed. Daar staat tegenover dat ik weinig ruimte zag voor reacties van leerlingen: het was vooral zenden, hoewel er coöperatieve werkvormen in verweven zaten. Ik mis het bruisende van mijn eigen groep 8, met veel ruimte voor dialoog en luisteren naar elkaar, zonder dat het zo strak is.</p>
+      </aside>
+    </section>
+
+    <section>
+      <h3>Kleiner, wel de moeite waard</h3>
+      <div class="with-photo">
+        <div class="minis">
+          <div class="mini"><h4>De drie harten</h4><p>Voor je iets zegt, vraag je jezelf af: is één antwoord nee, dan zeg je het niet.</p><div class="hearts"><span>Is het waar?</span><span>Is het vriendelijk?</span><span>Is het noodzakelijk?</span></div></div>
+          <div class="mini"><h4>Later beoordelen</h4><p>Cijfers en rapporten beginnen pas laat. Ze hechten waarde aan kwaliteit, niet aan beoordelingen.</p></div>
+          <div class="mini"><h4>Buitenspelen bij elk weer</h4><p>Bijna altijd naar buiten. In de kleine pauze vaste groepjes met een vaste speelplek, om relaties te versterken.</p></div>
+          <div class="mini"><h4>Handschrift</h4><p>Op beide scholen hebben leerlingen een mooi handschrift.</p></div>
+          <div class="mini"><h4>Mini-studio</h4><p>Vergelijkbaar met onze maak- en maatwerkgroep, dus niet bijzonder.</p></div>
+        </div>
+        <figure class="ph"><button data-photo="handschrift" aria-label="Vergroot foto: handschrift"><img src="img/handschrift.jpg" alt="Handgeschreven verhalen van leerlingen aan de wand" loading="lazy"></button><figcaption><b>Handschrift.</b> Handgeschreven verhalen aan de wand.</figcaption></figure>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ QUICK WINS ============ -->
+  <div class="panel" id="quick-wins" role="tabpanel" aria-labelledby="t-quick-wins" hidden>
+    <div class="panel-head">
+      <h2>Mijn vier quick wins</h2>
+      <p>Mijn doel was minimaal twee toepasbare quick wins. Het werden er vier, elk met een eerste stap en een manier om te zien dat het werkt.</p>
+    </div>
+
+    <div class="qws">
+      <article class="qw"><div class="num">1</div><div class="content">
+        <div><h4>Schrijffeedback met AI bij Nederlandse teksten</h4><p class="src">Bron: de Engelse les op Katarina Norra</p></div>
+        <p>Bij een betoog of recensie uploaden leerlingen hun tekst, krijgen tips en herschrijven.</p>
+        <div class="cols">
+          <div><span class="k">Eerste stap</span><p>Een vaste feedbackprompt maken en testen met Copilot, binnen een door Prisma goedgekeurde omgeving en zonder persoonsgegevens. Bespreekpunt voor de stichtingsbrede werkgroep.</p></div>
+          <div><span class="k">Voor wie</span><p>Eigen klas, taal.</p></div>
+          <div><span class="k">Zo zie ik dat het werkt</span><p>Herschreven teksten zijn beter dan de eerste versie en leerlingen kunnen zeggen welke tip ze gebruikten. Werkdrukverlagend voor de leerkracht.</p></div>
+        </div>
+      </div></article>
+
+      <article class="qw"><div class="num">2</div><div class="content">
+        <div><h4>Leerlinggesprekken naast (of in plaats van) de SCOL</h4><p class="src">Bron: het jaarlijks leerlinggesprek van de directeur op Katarina Norra</p></div>
+        <p>Eén of twee keer per jaar zes leerlingen per groep spreken.</p>
+        <div class="cols">
+          <div><span class="k">Eerste stap</span><p>Bespreken met de kwaliteitscoördinator en directie. Eventueel eerst een proef met zes leerlingen uit mijn eigen groep.</p></div>
+          <div><span class="k">Voor wie</span><p>School, via de kwaliteitscoördinator.</p></div>
+          <div><span class="k">Zo zie ik dat het werkt</span><p>Het gesprek geeft de reden achter de SCOL-antwoorden en concrete verbeterpunten.</p></div>
+        </div>
+      </div></article>
+
+      <article class="qw"><div class="num">3</div><div class="content">
+        <div><h4>Verhaal schrijven in een Minecraft-wereld</h4><p class="src">Bron: Katarina Norra, grade 4 of 5: heks, verrekijker en verdriet</p></div>
+        <p>Een verhaal typen op drie sleutelwoorden, waarna leerlingen elkaars verhalen lezen.</p>
+        <div class="cols">
+          <div><span class="k">Eerste stap</span><p>Wij hebben Minecraft Education. Zoeken welke wereld hiervoor passend is, het proberen en eventueel aanbieden in groep 5 of 6.</p></div>
+          <div><span class="k">Voor wie</span><p>Groep 5 of 6, taal en ICT.</p></div>
+          <div><span class="k">Zo zie ik dat het werkt</span><p>Leerlingen lezen en bespreken elkaars verhalen in de wereld.</p></div>
+        </div>
+        <button class="go" data-photo="minecraft">Bekijk de foto van de Minecraft-opdracht →</button>
+      </div></article>
+
+      <article class="qw"><div class="num">4</div><div class="content">
+        <div><h4>De drie harten</h4><p class="src">Bron: Campus Manilla, de drie harten zichtbaar in de klas</p></div>
+        <p>Is het waar, is het vriendelijk, is het noodzakelijk? Is één antwoord nee, dan zeg je het niet.</p>
+        <div class="cols">
+          <div><span class="k">Eerste stap</span><p>De aspecten gebruiken, maar in een andere context die past bij onze school.</p></div>
+          <div><span class="k">Voor wie</span><p>Eigen klas en school, sociale omgang.</p></div>
+          <div><span class="k">Zo zie ik dat het werkt</span><p>Leerlingen gebruiken de vragen zelf onderling.</p></div>
+        </div>
+      </div></article>
+    </div>
+
+    <section>
+      <h3>Wat betekent dit?</h3>
+      <div class="grid two">
+        <article class="card">
+          <span class="tag">Voor mijn groep 8</span>
+          <ul>
+            <li><strong>Digitaal differentiëren:</strong> schrijffeedback met AI en verhalen in Minecraft (quick wins 1 en 3).</li>
+            <li><strong>Inclusiever lesgeven:</strong> een sociogram invullen om mijn band met elke leerling in beeld te krijgen en acties te kiezen bij oranje en rood, en de drie harten gebruiken (quick win 4).</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="tag">Voor BS De Groenling en Prisma: mijn voorstellen</span>
+          <ul>
+            <li><strong>DigiExam als aanbeveling:</strong> onderzoeken of we een gesloten omgeving kunnen inzetten bij toetsen en schrijfopdrachten.</li>
+            <li><strong>Het sociogram</strong> deel ik in het team, vooral als tip voor duopartners.</li>
+            <li><strong>Leerlinggesprekken door de kwaliteitscoördinator</strong> naast (of in plaats van) de SCOL (quick win 2).</li>
+            <li><strong>AI: de pionier op Katarina</strong> vond ik inspirerend. Op doordachte wijze zoekt zij naar toepassingen van AI die het onderwijs ondersteunen en de werkdruk verlagen.</li>
+            <li><strong>Inclusie en hoogbegaafdheid:</strong> de Zweedse inclusie zie ik niet als voorbeeld. Wel kijken wat onze maak- en maatwerkgroep al biedt.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ PRISMA-GEVOEL ============ -->
+  <div class="panel" id="prisma" role="tabpanel" aria-labelledby="t-prisma" hidden>
+    <div class="panel-head">
+      <h2>Prisma-gevoel</h2>
+      <p>Een grote meerwaarde van deze reis was het ontmoeten van collega's.</p>
+    </div>
+
+    <section class="with-photo narrow">
+      <div style="display:grid;gap:1.2rem">
+        <div class="card">
+          <p>Veel collega's kende ik van naam, maar ik heb ze nu beter leren kennen. Door in gesprek te gaan over verschillende onderwijsvisies weet ik veel meer van hoe het op andere scholen gaat. Omdat je drie dagen intensief met elkaar bezig bent, bouw je echt een band op.</p>
+          <p>Er was een balans tussen serieuze zaken, zoals de schoolbezoeken en onderwijskundige gesprekken, en ontspanning, zoals een drankje bij de Hard Rock Café en een excursie naar het Vasa-museum. Het was een totaalpakket.</p>
+        </div>
+        <div>
+          <h3 style="font-size:1.2rem;margin-bottom:.8rem">Samenwerking na de reis</h3>
+          <div class="contacts">
+            <div class="contact"><i class="ic"></i><p>Een collega wil voor groep 8 aansluiten bij de <strong>VO-week</strong>.</p></div>
+            <div class="contact"><i class="ic"></i><p>Met een andere collega ga ik meer uitwisselen op het gebied van <strong>hoogbegaafdheid</strong>.</p></div>
+            <div class="contact"><i class="ic"></i><p>Interessante gesprekken met <strong>Hay Frericks</strong>, een onderwijsman in hart en nieren. Hij kan wellicht een verbinding leggen met SPO Venray op het gebied van digitale geletterdheid.</p></div>
+          </div>
+        </div>
+      </div>
+      <figure class="ph tall"><button data-photo="vasa" aria-label="Vergroot foto: Vasa-museum"><img src="img/vasa.jpg" alt="Roy Verberne voor het Vasa-schip in het Vasa-museum" loading="lazy"></button><figcaption><b>Vasa-museum.</b> Zeer indrukwekkend en mooi om samen te ervaren.</figcaption></figure>
+    </section>
+
+    <div class="thanks">
+      <h3>Missie geslaagd!</h3>
+      <p>Het Prisma-gevoel is zeker versterkt. Een groot woord van dank aan de organisatie: Nicole, Corneeltje, Gerty en Hay, voor het mogelijk maken van deze waardevolle studiereis.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Roy Verberne · BS De Groenling · Stichting Prisma · <button class="foot-dl" type="button" data-download>Download verslag (PDF)</button></span>
+    <span>Vragen of reageren: <span class="mail">r.verberne@prisma-spo.nl</span></span>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Foto vergroot">
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Sluiten">✕</button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Vorige foto">‹</button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Volgende foto">›</button>
+  <div class="lb-inner">
+    <img id="lb-img" src="" alt="">
+    <p class="lb-cap" id="lb-cap"></p>
+    <span class="lb-count" id="lb-count"></span>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  const PHOTOS = [
+    {id:"minecraft", src:"img/minecraft.jpg", title:"Minecraft-verhaal", cap:"Leerlingen typen een verhaal in een Minecraft-wereld op de iPad; op het bord staan de drie sleutelwoorden: heks, verrekijker en verdriet (Katarina Norra)."},
+    {id:"werkboek", src:"img/werkboek-ipad.jpg", title:"Werkboek en klaartaak", cap:"Twee leerlingen aan het werk. Het werkboek is de basis, de iPad met rekenspelletjes is een klaartaak."},
+    {id:"digiexam", src:"img/digiexam.jpg", title:"DigiExam", cap:"De leerkracht zet de taken open, zodat leerlingen in een gesloten omgeving werken. Er hangen nauwelijks tot geen digiborden in de klassen; ik zag alleen whiteboards met beamers die gekoppeld worden aan laptops."},
+    {id:"handschrift", src:"img/handschrift.jpg", title:"Handschrift", cap:"Handgeschreven verhalen van leerlingen aan de wand. Het mooie handschrift viel me op beide scholen op."},
+    {id:"begeleiding", src:"img/begeleiding.jpg", title:"Begeleiding in de klas", cap:"Een jongen met autisme krijgt de hele dag 1-op-1 begeleiding, zowel tijdens de instructie als bij de verwerking."},
+    {id:"vasa", src:"img/vasa.jpg", title:"Vasa-museum", cap:"We zijn met collega's naar het Vasa-museum gegaan. Dit was zeer indrukwekkend en mooi om samen te ervaren."}
+  ];
+  const TABS = ["overzicht","doel-1","doel-2","bijvangst","quick-wins","prisma"];
+  const tabs = document.querySelectorAll(".tab");
+
+  function show(id, scroll){
+    if(!TABS.includes(id)) id = "overzicht";
+    TABS.forEach(t=>{ document.getElementById(t).hidden = (t!==id); });
+    tabs.forEach(b=>{ const on = b.dataset.tab===id; b.setAttribute("aria-selected", on); b.tabIndex = on?0:-1; if(on && b.scrollIntoView) b.scrollIntoView({block:"nearest",inline:"nearest"}); });
+    if(scroll){ const nav=document.querySelector(".tabs"); const y = document.querySelector("main").getBoundingClientRect().top + window.scrollY - nav.offsetHeight; if(window.scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); }
+  }
+  function go(id){
+    if(location.hash !== "#"+id){ try{ history.replaceState(null,"","#"+id); }catch(e){ location.hash=id; } }
+    show(id,true);
+  }
+  tabs.forEach((b,i)=>{
+    b.addEventListener("click",()=>go(b.dataset.tab));
+    b.addEventListener("keydown",e=>{
+      if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft") return;
+      const n = (i + (e.key==="ArrowRight"?1:-1) + tabs.length) % tabs.length;
+      tabs[n].focus(); go(tabs[n].dataset.tab);
+    });
+  });
+  document.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.goto)));
+  window.addEventListener("hashchange",()=>show(location.hash.slice(1),false));
+  show(location.hash.slice(1),false);
+
+  // Download verslag (PDF)
+  const PDF_URL="verslag/Persoonlijk-Ontwikkelverslag-Studiereis-Stockholm-2026.pdf";
+  const PDF_NAME="Persoonlijk Ontwikkelverslag Studiereis Stockholm 2026.pdf";
+  const dlBtns=document.querySelectorAll("[data-download]");
+  const dlStatus=document.querySelector(".dl-status");
+  let dlApi=null, dlBusy=false, pdfBlob=null;
+  function say(t){ if(dlStatus) dlStatus.textContent=t; }
+  // Buiten Claude (bijv. op Vercel) is er geen window.claude: dan gewoon een directe download.
+  const inClaude=!!(window.claude && window.claude.use);
+  const dlReady=(inClaude ? window.claude.use("downloads") : Promise.resolve(null))
+    .then(api=>{ dlApi=api; if(inClaude && !api){ dlBtns.forEach(b=>b.hidden=true); } return api; })
+    .catch(()=>{ if(inClaude) dlBtns.forEach(b=>b.hidden=true); return null; });
+  function directDownload(){
+    const a=document.createElement("a"); a.href=PDF_URL; a.download=PDF_NAME; a.rel="noopener";
+    document.body.appendChild(a); a.click(); a.remove();
+    say("Het verslag wordt gedownload.");
+  }
+  async function downloadPdf(){
+    if(!inClaude){ directDownload(); return; }
+    if(dlBusy) return; dlBusy=true; dlBtns.forEach(b=>b.disabled=true); say("Verslag wordt klaargezet…");
+    try{
+      const api = dlApi || await dlReady;
+      if(!api){ say("Downloaden is in deze weergave niet beschikbaar."); return; }
+      if(!pdfBlob){ const r=await fetch(PDF_URL); if(!r.ok) throw {code:"fetch"}; pdfBlob=await r.blob(); }
+      await api.save({filename:PDF_NAME, data:pdfBlob});
+      say("Het verslag is gedownload.");
+    }catch(e){
+      const c=e&&e.code;
+      if(c==="declined") say("");
+      else if(c==="rate_limited") say("Er staat al een downloadvraag open. Probeer het zo opnieuw.");
+      else if(c==="fetch") say("Het verslag kon niet worden geladen. Ververs de pagina en probeer het opnieuw.");
+      else say("Downloaden lukt hier niet. Open de pagina in claude.ai en probeer het daar.");
+    }finally{ dlBusy=false; dlBtns.forEach(b=>b.disabled=false); }
+  }
+  dlBtns.forEach(b=>b.addEventListener("click",downloadPdf));
+
+  // Lightbox
+  const lb=document.getElementById("lb"), img=document.getElementById("lb-img"), cap=document.getElementById("lb-cap"), cnt=document.getElementById("lb-count");
+  let cur=0;
+  function render(){
+    const p=PHOTOS[cur]; img.src=p.src; img.alt=p.title;
+    cap.innerHTML=""; const b=document.createElement("b"); b.textContent=p.title; cap.append(b, document.createTextNode(p.cap));
+    cnt.textContent=(cur+1)+" van "+PHOTOS.length;
+  }
+  function open(id){
+    cur=Math.max(0,PHOTOS.findIndex(p=>p.id===id)); render();
+    if(typeof lb.showModal==="function"){ try{ lb.showModal(); }catch(e){ lb.setAttribute("open",""); } } else lb.setAttribute("open","");
+  }
+  function step(d){ cur=(cur+d+PHOTOS.length)%PHOTOS.length; render(); }
+  document.querySelectorAll("[data-photo]").forEach(b=>b.addEventListener("click",()=>open(b.dataset.photo)));
+  document.getElementById("lb-prev").addEventListener("click",e=>{e.stopPropagation();step(-1);});
+  document.getElementById("lb-next").addEventListener("click",e=>{e.stopPropagation();step(1);});
+  document.getElementById("lb-close").addEventListener("click",()=>lb.close?lb.close():lb.removeAttribute("open"));
+  lb.addEventListener("click",e=>{ if(e.target===lb || e.target.classList.contains("lb-inner")) lb.close(); });
+  lb.addEventListener("keydown",e=>{ if(e.key==="ArrowRight") step(1); if(e.key==="ArrowLeft") step(-1); });
+  let sx=null;
+  lb.addEventListener("touchstart",e=>{ sx=e.touches[0].clientX; },{passive:true});
+  lb.addEventListener("touchend",e=>{ if(sx===null) return; const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>50) step(dx<0?1:-1); sx=null; });
+})();
+</script>
+</body>
+</html>
